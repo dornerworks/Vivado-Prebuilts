@@ -1,4 +1,4 @@
-source $::env(BAO_DEMOS)/platforms/$::env(PLATFORM)/scripts/env.tcl
+source $::env(BASEDIR)/scripts/env.tcl
 
 connect
 targets -set -filter {name =~ "PSU"}

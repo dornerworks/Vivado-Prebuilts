@@ -8,9 +8,8 @@ if [ ! -f "$1" ]; then
     exit 1
 fi
 
-export BAO_DEMOS=${PWD}/../bao-demos/
 export PLATFORM=rocket-fpga-zcu102
-export VIVADO_CORES=1
-export BAO_DEMOS_WRKDIR_PLAT=${PWD}/rocketchip-h-extend/
+export BASEDIR=${PWD}
+export WRKDIR=$BASEDIR/rocketchip-h-extend/
 
-xsct $BAO_DEMOS/platforms/$PLATFORM/scripts/deploy.tcl $1
+xsct $BASEDIR/scripts/deploy.tcl $1
